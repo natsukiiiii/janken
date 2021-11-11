@@ -7,8 +7,11 @@
 </head>
 <body>
     <?php
+    $guu = 'グー';
+    $choki = 'チョキ';
+    $paa = 'パー';
     
-$hands = ['グー','チョキ','パー'];
+$hands = [$guu,$choki,$paa];
 if(isset($_POST['playerHand'])){
     $playerHand = $_POST['playerHand'];
 
@@ -19,11 +22,11 @@ if(isset($_POST['playerHand'])){
 
 if($playerHand == $pcHand){
  $result = 'あいこ';
-}elseif($playerHand == 'グー' && $pcHand == 'チョキ'){
+}elseif($playerHand == $guu && $pcHand == $choki){
     $result = '勝ち';
-}elseif($playerHand == 'チョキ' && $pcHand == 'パー'){
+}elseif($playerHand == $choki && $pcHand == $paa){
     $result = '勝ち';
-}elseif($playerHand == 'パー' && $pcHand == 'グー'){
+}elseif($playerHand == $paa && $pcHand == $guu){
     $result = '勝ち';
 }else{
     $result = '負け';
